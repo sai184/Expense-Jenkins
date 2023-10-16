@@ -9,7 +9,7 @@
         <userRemoteConfigs>
             <hudson.plugins.git.UserRemoteConfig>
                 <url>https://github.com/raghudevopsb75/expense-terraform.git</url>
-                <credentialsId>sssh</credentialsId>
+                <credentialsId>ssh</credentialsId>
             </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
         <branches>
