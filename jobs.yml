@@ -7,7 +7,7 @@
   tasks:
     - name: create jenkins jobs - Frontend
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'mjob.xml') }}" #why using temp means in jenkins job it is giving wrong repo yy beacuase it is taking from test.xml  job so we need dynamically ,template is it will take dynamically what ever we need that repo will take.
+        config: "{{ lookup('template', 'job.xml') }}" #why using temp means in jenkins job it is giving wrong repo yy beacuase it is taking from test.xml  job so we need dynamically ,template is it will take dynamically what ever we need that repo will take.
         name: Frontend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
@@ -19,7 +19,7 @@
 
     - name: create jenkins jobs - backend
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'mjob.xml') }}"
+        config: "{{ lookup('template', 'job.xml') }}"
         name: backend
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
@@ -32,7 +32,7 @@
 
     - name: create jenkins jobs - Expense Parameters
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'mjob.xml') }}"
+        config: "{{ lookup('template', 'job.xml') }}"
         name: expense-parameters
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
@@ -44,7 +44,7 @@
 
     - name: create jenkins jobs - Expense Terraform
       community.general.jenkins_job:
-        config: "{{ lookup('template', 'mjob.xml') }}"
+        config: "{{ lookup('template', 'job.xml') }}"
         name: expense-terraform
         password: "{{jenkins_password}}"
         url: "{{jenkins_url}}"
