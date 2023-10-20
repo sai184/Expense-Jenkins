@@ -15,7 +15,7 @@
         user: "{{jenkins_username}}"
       vars:
         repo_name: frontend
-        #auto_trigger: "true"
+        auto_trigger: "true"
 
     - name: create jenkins jobs - backend
       community.general.jenkins_job:
@@ -27,7 +27,7 @@
         user: "{{jenkins_username}}"
       vars:
         repo_name: backend
-        #auto_trigger: "true"
+        auto_trigger: "true"
 
 
     - name: create jenkins jobs - Expense Parameters
@@ -40,7 +40,7 @@
 
       vars:
         repo_name: parameter-store       #decalring repo in playlevel the it will give coorect repo in job
-        #auto_trigger: "false"
+        auto_trigger: "false"
 
     - name: create jenkins jobs - Expense Terraform
       community.general.jenkins_job:
@@ -52,4 +52,4 @@
         user: "{{jenkins_username}}"
       vars:
         repo_name: Expense-Terraform
-        #auto_trigger: "false"
+        auto_trigger: "false"
